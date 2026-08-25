@@ -449,7 +449,8 @@ h3.vv-h3{ font-size: clamp(20px, 2.4vw, 26px); font-weight: 600; }
 }
 
 /* -------------------------------- Reveal-on-scroll ---------------------------------- */
-.vv-reveal{ opacity: 0; transform: translateY(24px); transition: opacity .7s var(--vv-ease), transform .7s var(--vv-ease); }
+.vv-reveal{ transition: opacity .7s var(--vv-ease), transform .7s var(--vv-ease); }
+.vv-reveal.vv-pre{ opacity: 0; transform: translateY(24px); }
 .vv-reveal.is-visible{ opacity: 1; transform: translateY(0); }
 .vv-reveal-1{ transition-delay: .08s; }
 .vv-reveal-2{ transition-delay: .16s; }

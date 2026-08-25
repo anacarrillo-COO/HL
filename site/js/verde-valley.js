@@ -90,15 +90,13 @@
      -------------------------------------------------------------------- */
   (function reveal() {
     var items = $all(".vv-reveal");
-    if (!items.length) return;
-    if (!("IntersectionObserver" in window)) {
-      items.forEach(function (el) { el.classList.add("is-visible"); });
-      return;
-    }
+    if (!items.length || !("IntersectionObserver" in window)) return;
+    items.forEach(function (el) { el.classList.add("vv-pre"); });
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
           entry.target.classList.add("is-visible");
+          entry.target.classList.remove("vv-pre");
           io.unobserve(entry.target);
         }
       });
