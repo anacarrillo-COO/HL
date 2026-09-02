@@ -6,6 +6,27 @@ pair you paste into GoHighLevel's Custom Code panels, plus one reference
 HTML file per page that shows exactly what markup goes into each page's
 Custom HTML element.
 
+## Quick start: one-page client approval demo
+
+**`onepage.html` is a single, self-contained page** — homepage plus all 8
+service "detail" write-ups folded into one long scrolling page (each
+service card jumps down to its own block via an in-page anchor, e.g.
+`#detail-rope-access`, with a "back to all services" link to return). Use
+this to get client approval fast, before splitting things into real
+subpages:
+
+1. Paste `css/poe-heights.css` into GHL's Custom CSS.
+2. Paste `js/poe-heights.js` into that page's footer Custom Code.
+3. Paste everything between `<body class="ph-root">` and `</body>` in
+   `onepage.html` (skip the trailing `<script>` tag) into that page's
+   Custom HTML element.
+4. Add the two Google Fonts `<link>` tags from the top of `onepage.html`'s
+   `<head>` to GHL's header Custom Code.
+
+Once the client approves, split `onepage.html` back into `index.html` +
+`services/*.html` (already built and ready in this folder — see below) and
+delete `onepage.html`.
+
 ## What changed vs. the client's original mockup
 
 1. **Color palette** — swapped the black/cream theme for the client's
@@ -23,7 +44,10 @@ Custom HTML element.
    photo, a longer description, a checklist of what's included, and an
    "ideal for" list, per the client's request.
 
-## How to publish this in GoHighLevel
+## How to publish the full multi-page version in GoHighLevel
+
+(Skip this section for the one-page approval demo above — use it once the
+client has signed off and you're ready to split things into real pages.)
 
 1. **CSS** — paste the entire contents of `css/poe-heights.css` into
    Site Settings → Custom CSS (or the page's own Custom CSS field). It's

@@ -289,6 +289,19 @@
 .ph-checklist svg{width:18px;height:18px;flex-shrink:0;margin-top:2px;stroke:var(--ph-accent);}
 .ph-idealfor{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px;}
 
+/* --------------------- STACKED SERVICE DETAILS (one-page version) -------------
+   Used only on the single-page approval build, where all 8 service detail
+   blocks live on the homepage instead of on separate pages. Once the client
+   approves and the site is split into real subpages, this block and the
+   markup that uses it can be deleted. */
+.ph-detail-row{padding:64px 0;border-top:1px solid var(--ph-hairline);}
+.ph-detail-row:first-child{padding-top:0;border-top:none;}
+.ph-detail-row .ph-eyebrow{margin-bottom:18px;}
+.ph-jumpback{
+  font-size:0.7rem;text-transform:uppercase;letter-spacing:0.14em;
+  color:var(--ph-accent);display:inline-block;margin-top:30px;
+}
+
 /* -------------------------------- TESTIMONIALS -------------------------------- */
 .ph-testimonial-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;}
 .ph-testimonial-card{padding:34px 0 0;border-top:1px solid var(--ph-ink);}
